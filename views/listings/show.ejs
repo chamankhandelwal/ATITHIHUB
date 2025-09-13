@@ -78,9 +78,9 @@
                             </form>
                             <% } %>
 
-                                <% if(listing.review>0){ %>
+                                <% if(listing.review.length>0){ %>
                                 <div class="row">
-                                    <p><b>All review</b></p>
+                                    <p><b>All review:</b></p>
                                     <% for(review of listing.review){ %>
 
                                         <div class="card col-5 ms-3 mb-3">
@@ -109,21 +109,7 @@
 
 
                     </div>
-                    <div class="col-8 offset-3 mb-3">
-                        <h3>Where you will be</h3>
-                        <div id="map">
-                        </div>
-                    </div>
 
         </div>
     </body>
-    <script>
-        let mapToken = "<%= MAP_TOKEN %>";
-        console.log(mapToken);
-        mapboxgl.accessToken = mapToken;
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        center: [-74.5, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 9 // starting zoom
-    });
-</script>
+    
