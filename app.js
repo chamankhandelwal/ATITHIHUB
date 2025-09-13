@@ -94,10 +94,13 @@ app.use((req,res,next)=>{
 app.use("/listings",listings);
 app.use("/listings/:id/review",reviews);
 app.use("/",user);
-
+app.get("/", (req,res)=>{
+    res.redirect("/listings");
+});
 app.use((req,res,next)=>{
     next(new ExpressError(404,"Page not found"));
 })
+
 app.use((err,req,res,next)=>{
     
     let {statusCode=500,message="Something went wrong..."} = err;
