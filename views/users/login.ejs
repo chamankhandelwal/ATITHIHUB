@@ -1,0 +1,24 @@
+<% layout("layouts/bolierplate.ejs") %>
+
+    <div class="row">
+        <div class="col-4 offset-4 mt-3">
+            <h3>Reconnect with ATITHIHUB</h3>
+            <form action="/login" novalidate class="needs-validation" method="post">
+                <div class="mb-3">
+                        <label for="username" class="form-lable">Username:</label>
+                        <input type="text" name="username" id="username" required class="form-control" placeholder="Enter a username">
+                        <div class="invalid-feedback">
+                            Please enter your Username.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-lable">Password:</label>
+                        <input type="password" name="password" id="password" required class="form-control" placeholder="Enter a strong password">
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+                    <button class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
